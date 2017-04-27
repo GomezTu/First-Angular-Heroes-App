@@ -1,0 +1,12 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | addString:'Bubbles'}} details!</h2>
+  <div>
+    <label>id:</label> {{hero.id}}
+    <label>Birth:</label> {{hero.birthDate | date | uppercase}}
+  </div>
+  <div>
+    <label>name:</label>
+    <input type="tex" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
