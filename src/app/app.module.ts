@@ -11,6 +11,8 @@ import { HeroService } from './shared/services/hero-service';
 import { HeroesComponent } from './components/hero-list/heroes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddStringPipe } from './shared/pipes/add-string.pipe';
+import { CrisisListComponent } from './components/crisis-list/crisis-list.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AddStringPipe } from './shared/pipes/add-string.pipe';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
-    AddStringPipe
+    AddStringPipe,
+    CrisisListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
