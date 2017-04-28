@@ -6,21 +6,15 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-import { HeroService } from './shared/services/hero-service';
-import { HeroesComponent } from './components/hero-list/heroes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AddStringPipe } from './shared/pipes/add-string.pipe';
 import { CrisisListComponent } from './components/crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent,
-    HeroesComponent,
     DashboardComponent,
-    AddStringPipe,
     CrisisListComponent,
     PageNotFoundComponent
   ],
@@ -28,9 +22,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     BrowserModule,
     FormsModule,
     HttpModule,
+    HeroesModule,
     AppRoutingModule
   ],
-  providers: [HeroService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
