@@ -7,15 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { CrisisListComponent } from './components/crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    CrisisListComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -23,6 +22,7 @@ import { HeroesModule } from './heroes/heroes.module';
     FormsModule,
     HttpModule,
     HeroesModule,
+    CrisisCenterModule,
     AppRoutingModule
   ],
   providers: [],
