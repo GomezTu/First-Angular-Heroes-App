@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Crisis } from '../crisis-service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DialogService } from '../../shared/dialog.service';
 
 @Component({
   selector: 'app-crisis-detail',
@@ -13,7 +14,8 @@ export class CrisisDetailComponent implements OnInit {
 
   constructor(
     private route : ActivatedRoute,
-    private router : Router
+    private router : Router,
+    public dialogService : DialogService
   ) { }
 
   ngOnInit() {
@@ -40,6 +42,16 @@ export class CrisisDetailComponent implements OnInit {
     // Add a totally useless `foo` parameter for kicks.
     // Relative navigation back to the crises
     this.router.navigate(['../', { id: crisisId }], { relativeTo: this.route });
+  }
+
+  canDeactivate(): Promise<boolean> | boolean {
+    // Allow synchronous navigation (`true`) if no crisis or the crisis is unchanged
+    if (!this.crisis || this.crisis.name === this.editName) {
+      return true;
+    }
+    // Otherwise ask the user with the dialog service and return its
+    // promise which resolves to true or false when the user decides
+    return this.dialogService.confirm('Discard changes?');
   }
 
 }

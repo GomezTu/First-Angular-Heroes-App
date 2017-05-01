@@ -9,6 +9,7 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 import { CrisisService } from './crisis-service';
 import { CrisisDetailResolver } from './crisis-detail/crisis-detail-resolver.service';
+import { CanDeactivateGuard } from '../shared/guards/can-deactivate-guard.service';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { CrisisDetailResolver } from './crisis-detail/crisis-detail-resolver.ser
   providers: 
   [
     CrisisService,
-    CrisisDetailResolver
+    CrisisDetailResolver,
+    CanDeactivateGuard
   ]
 })
 export class CrisisCenterModule { }
