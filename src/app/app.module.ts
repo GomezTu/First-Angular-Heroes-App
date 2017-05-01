@@ -15,6 +15,9 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { LoginComponent } from './login/login.component';
 import { LoginRoutingModule } from './login/login-routing.module';
 import { DialogService } from './shared/dialog.service';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { DialogService } from './shared/dialog.service';
     DashboardComponent,
     PageNotFoundComponent,
     ComposeMessageComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent,
+    NavbarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
