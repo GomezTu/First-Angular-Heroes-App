@@ -9,7 +9,7 @@ import { CanDeactivateGuard } from '../shared/guards/can-deactivate-guard.servic
 
 const crisisCenterRoutes: Routes = [
   {
-    path: 'crisis-center',
+    path: '',
     component: CrisisCenterComponent,
     children: [
       {
